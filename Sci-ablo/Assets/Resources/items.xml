@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ItemDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Weapons>
+    <WeaponEntry>
+      <name>Weak Gun of Mastery</name>
+      <type>Gun</type>
+      <physDamage>8</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>20</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Freezing Hammer of Nourishment</name>
+      <type>Hammer</type>
+      <physDamage>0</physDamage>
+      <fireDamage>14</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>16</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Freezing Hammer of Mastery</name>
+      <type>Hammer</type>
+      <physDamage>0</physDamage>
+      <fireDamage>10</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>25</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Fiery Hammer of Skill</name>
+      <type>Hammer</type>
+      <physDamage>5</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>7</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Burning Gun of Fame</name>
+      <type>Gun</type>
+      <physDamage>10</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>42</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Strong Gun of the Leech</name>
+      <type>Gun</type>
+      <physDamage>22</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>0</speed>
+      <critChance>45</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Freezing Hammer of the Leech</name>
+      <type>Hammer</type>
+      <physDamage>0</physDamage>
+      <fireDamage>12</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>0</speed>
+      <critChance>48</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Frosted Hammer of Piercing</name>
+      <type>Hammer</type>
+      <physDamage>9</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>6</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Strong Hammer of Restoration</name>
+      <type>Hammer</type>
+      <physDamage>27</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>0</speed>
+      <critChance>29</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+  </Weapons>
+  <Armor>
+    <ArmorEntry>
+      <name>Reinforced Boots of Quickness</name>
+      <type>Boots</type>
+      <armor>84</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>14</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Sturdy Helmet of the Lizard</name>
+      <type>Helmet</type>
+      <armor>95</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>1</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Plated Helmet of the Hydra</name>
+      <type>Helmet</type>
+      <armor>207</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>2</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Rhino's Gloves of the Phoenix</name>
+      <type>Gloves</type>
+      <armor>0</armor>
+      <health>14</health>
+      <allRes>0</allRes>
+      <lifeRegen>5</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Vigorous Leggings of the Lizard</name>
+      <type>Leggings</type>
+      <armor>238</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>1</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Brittle Helmet of the Phoenix</name>
+      <type>Helmet</type>
+      <armor>32</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>4</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Brittle Helmet of Quickness</name>
+      <type>Helmet</type>
+      <armor>37</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>10</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Vigorous Leggings of Bliss</name>
+      <type>Leggings</type>
+      <armor>123</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>0</lifeRegen>
+      <moveSpeed>2</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Vigorous Boots of the Stallion</name>
+      <type>Boots</type>
+      <armor>166</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>29</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+  </Armor>
+</ItemDatabase>

@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Assets\Resources\Affix.cs" />
     <Compile Include="Assets\Resources\XMLManager.cs" />
+    <Compile Include="Assets\Scripts\crawlerAI.cs" />
     <Compile Include="Assets\Scripts\level_Manager.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,95 +2,225 @@
 <ItemDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Weapons>
     <WeaponEntry>
-      <name>Frigid Gun of Skill</name>
+      <name>Burning Gun of Mastery</name>
       <type>Gun</type>
       <physDamage>0</physDamage>
-      <fireDamage>25</fireDamage>
+      <fireDamage>10</fireDamage>
       <coldDamage>0</coldDamage>
-      <speed>7</speed>
+      <speed>22</speed>
       <critChance>0</critChance>
       <lifeLeech>0</lifeLeech>
     </WeaponEntry>
     <WeaponEntry>
-      <name>Weak Hammer of Fame</name>
+      <name>Frigid Hammer of Mastery</name>
       <type>Hammer</type>
-      <physDamage>5</physDamage>
+      <physDamage>0</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>25</coldDamage>
+      <speed>22</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Blazing Gun of Incision</name>
+      <type>Gun</type>
+      <physDamage>0</physDamage>
+      <fireDamage>20</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>0</speed>
+      <critChance>16</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Weak Gun of the Leech</name>
+      <type>Gun</type>
+      <physDamage>6</physDamage>
       <fireDamage>0</fireDamage>
       <coldDamage>0</coldDamage>
-      <speed>48</speed>
+      <speed>0</speed>
       <critChance>0</critChance>
+      <lifeLeech>32</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Blazing Gun of Mastery</name>
+      <type>Gun</type>
+      <physDamage>0</physDamage>
+      <fireDamage>28</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>23</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Freezing Hammer of Nourishment</name>
+      <type>Hammer</type>
+      <physDamage>0</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>13</coldDamage>
+      <speed>0</speed>
+      <critChance>14</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Weak Hammer of Piercing</name>
+      <type>Hammer</type>
+      <physDamage>9</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>5</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Strong Hammer of Fame</name>
+      <type>Hammer</type>
+      <physDamage>28</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>46</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Frigid Gun of Fame</name>
+      <type>Gun</type>
+      <physDamage>0</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>29</coldDamage>
+      <speed>44</speed>
+      <critChance>0</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Frigid Gun of Nourishment</name>
+      <type>Gun</type>
+      <physDamage>0</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>26</coldDamage>
+      <speed>0</speed>
+      <critChance>15</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Frosted Hammer of Puncturing</name>
+      <type>Hammer</type>
+      <physDamage>0</physDamage>
+      <fireDamage>5</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>0</speed>
+      <critChance>8</critChance>
+      <lifeLeech>0</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Strong Hammer of the Leech</name>
+      <type>Hammer</type>
+      <physDamage>20</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>0</speed>
+      <critChance>0</critChance>
+      <lifeLeech>38</lifeLeech>
+    </WeaponEntry>
+    <WeaponEntry>
+      <name>Average Hammer of Nourishment</name>
+      <type>Hammer</type>
+      <physDamage>11</physDamage>
+      <fireDamage>0</fireDamage>
+      <coldDamage>0</coldDamage>
+      <speed>0</speed>
+      <critChance>11</critChance>
       <lifeLeech>0</lifeLeech>
     </WeaponEntry>
   </Weapons>
   <Armor>
     <ArmorEntry>
-      <name>Healthy Chest of the Phoenix</name>
-      <type>Chest</type>
-      <armor>30</armor>
+      <name>Plated Boots of the Lizard</name>
+      <type>Boots</type>
+      <armor>215</armor>
       <health>0</health>
-      <allRes>0</allRes>
-      <lifeRegen>5</lifeRegen>
-      <moveSpeed>0</moveSpeed>
-      <cooldown>0</cooldown>
-    </ArmorEntry>
-    <ArmorEntry>
-      <name>Mammoth's Leggings of Joy</name>
-      <type>Leggings</type>
-      <armor>0</armor>
-      <health>24</health>
       <allRes>0</allRes>
       <lifeRegen>1</lifeRegen>
       <moveSpeed>0</moveSpeed>
       <cooldown>0</cooldown>
     </ArmorEntry>
     <ArmorEntry>
-      <name>Mammoth's Chest of the Phoenix</name>
+      <name>Reinforced Gloves of the Hydra</name>
+      <type>Gloves</type>
+      <armor>84</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>3</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Plated Helmet of the Cheetah</name>
+      <type>Helmet</type>
+      <armor>101</armor>
+      <health>0</health>
+      <allRes>0</allRes>
+      <lifeRegen>0</lifeRegen>
+      <moveSpeed>46</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Sturdy Boots of Joy</name>
+      <type>Boots</type>
+      <armor>0</armor>
+      <health>0</health>
+      <allRes>91</allRes>
+      <lifeRegen>0</lifeRegen>
+      <moveSpeed>1</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Armadillo's Chest of Quickness</name>
       <type>Chest</type>
       <armor>0</armor>
-      <health>18</health>
-      <allRes>0</allRes>
+      <health>0</health>
+      <allRes>9</allRes>
+      <lifeRegen>17</lifeRegen>
+      <moveSpeed>0</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Sturdy Boots of the Stallion</name>
+      <type>Boots</type>
+      <armor>0</armor>
+      <health>0</health>
+      <allRes>63</allRes>
+      <lifeRegen>0</lifeRegen>
+      <moveSpeed>20</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Armadillo's Gloves of the Cheetah</name>
+      <type>Gloves</type>
+      <armor>0</armor>
+      <health>0</health>
+      <allRes>5</allRes>
+      <lifeRegen>0</lifeRegen>
+      <moveSpeed>34</moveSpeed>
+      <cooldown>0</cooldown>
+    </ArmorEntry>
+    <ArmorEntry>
+      <name>Sturdy Leggings of the Phoenix</name>
+      <type>Leggings</type>
+      <armor>0</armor>
+      <health>0</health>
+      <allRes>66</allRes>
       <lifeRegen>5</lifeRegen>
       <moveSpeed>0</moveSpeed>
       <cooldown>0</cooldown>
     </ArmorEntry>
     <ArmorEntry>
-      <name>Armadillo's Leggings of the Phoenix</name>
+      <name>Reinforced Leggings of Joy</name>
       <type>Leggings</type>
-      <armor>7</armor>
-      <health>0</health>
-      <allRes>0</allRes>
-      <lifeRegen>5</lifeRegen>
-      <moveSpeed>0</moveSpeed>
-      <cooldown>0</cooldown>
-    </ArmorEntry>
-    <ArmorEntry>
-      <name>Plated Gloves of Bliss</name>
-      <type>Gloves</type>
-      <armor>117</armor>
+      <armor>84</armor>
       <health>0</health>
       <allRes>0</allRes>
       <lifeRegen>0</lifeRegen>
-      <moveSpeed>2</moveSpeed>
-      <cooldown>0</cooldown>
-    </ArmorEntry>
-    <ArmorEntry>
-      <name>Vigorous Gloves of Bliss</name>
-      <type>Gloves</type>
-      <armor>168</armor>
-      <health>0</health>
-      <allRes>0</allRes>
-      <lifeRegen>0</lifeRegen>
-      <moveSpeed>2</moveSpeed>
-      <cooldown>0</cooldown>
-    </ArmorEntry>
-    <ArmorEntry>
-      <name>Plated Leggings of the Cheetah</name>
-      <type>Leggings</type>
-      <armor>134</armor>
-      <health>0</health>
-      <allRes>0</allRes>
-      <lifeRegen>49</lifeRegen>
-      <moveSpeed>0</moveSpeed>
+      <moveSpeed>1</moveSpeed>
       <cooldown>0</cooldown>
     </ArmorEntry>
   </Armor>

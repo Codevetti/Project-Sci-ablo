@@ -5,6 +5,12 @@ using System.IO;
 
 public class Affix : MonoBehaviour
 {
+
+    //brainstorm note:
+    //need to create weapon/armor specific base items
+    //(Gravity Hammer, Super Sledge, etc...)
+    //need to implement base stats for said items then apply the affix rolls in another method
+
     string[] WeaponPrefix = new string[]
     {
         "Weak ", "Average ", "Strong ", //+phys damage
@@ -101,14 +107,12 @@ public class Affix : MonoBehaviour
         if (temp == 1)
         {
             weaponType item = (weaponType)((int)Random.Range(0,2));
-            name = WeaponPrefix[Mathf.FloorToInt(Random.value * WeaponPrefix.Length)] + "|" + item + "|" + WeaponSuffix[Mathf.FloorToInt(Random.value * WeaponSuffix.Length)];
-            print(item.ToString());
+            name = WeaponPrefix[Random.Range(0, WeaponPrefix.Length)] + "|" + item + "|" + WeaponSuffix[Random.Range(0, WeaponSuffix.Length)];
         }
         else
         {
             armorType item = (armorType)((int)Random.Range(0,5));
-            name = ArmorPrefix[Mathf.FloorToInt(Random.value * ArmorPrefix.Length)] + "|" + item + "|" + ArmorSuffix[Mathf.FloorToInt(Random.value * ArmorSuffix.Length)];
-            print(item.ToString());
+            name = ArmorPrefix[Random.Range(0, ArmorPrefix.Length)] + "|" + item + "|" + ArmorSuffix[Random.Range(0, ArmorSuffix.Length)];
         }
 
         string[] affixes = name.Split('|');
@@ -145,11 +149,11 @@ public class Affix : MonoBehaviour
                     i++;
                     if (s == prefix)
                     {
-                        if (i <= 6)
+                        if (i <= 3)
                         {
                             physDamage = (int)Random.Range((float)WeaponPrefixStats[2*i], (float)WeaponPrefixStats[2*i + 1]);
                         }
-                        else if (i <= 12 && i >= 7)
+                        else if (i <= 6 && i >= 4)
                         {
                             fireDamage = (int)Random.Range((float)WeaponPrefixStats[2*i], (float)WeaponPrefixStats[2*i + 1]);
                         }
@@ -169,11 +173,11 @@ public class Affix : MonoBehaviour
                     i++;
                     if (s == suffix)
                     {
-                        if (i <= 6)
+                        if (i <= 3)
                         {
                             speed = (int)Random.Range((float)WeaponSuffixStats[2*i], (float)WeaponSuffixStats[2*i + 1]);
                         }
-                        else if (i <= 12 && i >= 7)
+                        else if (i <= 6 && i >= 4)
                         {
                             critChance = (int)Random.Range((float)WeaponSuffixStats[2*i], (float)WeaponSuffixStats[2*i + 1]);
                         }
@@ -202,11 +206,11 @@ public class Affix : MonoBehaviour
                     i++;
                     if (s == prefix)
                     {
-                        if (i <= 6)
+                        if (i <= 3)
                         {
                             armor = (int)Random.Range((float)ArmorPrefixStats[2*i], (float)ArmorPrefixStats[2*i + 1]);
                         }
-                        else if (i <= 12 && i >= 7)
+                        else if (i <= 4 && i >= 6)
                         {
                             health = (int)Random.Range((float)ArmorPrefixStats[2*i], (float)ArmorPrefixStats[2*i + 1]);
                         }
@@ -226,11 +230,11 @@ public class Affix : MonoBehaviour
                     i++;
                     if (s == suffix)
                     {
-                        if (i <= 6)
+                        if (i <= 3)
                         {
                             lifeRegen = (int)Random.Range((float)ArmorSuffixStats[2*i], (float)ArmorSuffixStats[2*i + 1]);
                         }
-                        else if (i <= 12 && i >= 7)
+                        else if (i <= 6 && i >= 4)
                         {
                             moveSpeed = (int)Random.Range((float)ArmorSuffixStats[2*i], (float)ArmorSuffixStats[2*i + 1]);
                         }

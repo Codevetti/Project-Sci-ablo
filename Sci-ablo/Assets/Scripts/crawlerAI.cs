@@ -1,37 +1,59 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEditor.Animations;
 using System;
 
 public class crawlerAI : MonoBehaviour {
 
+    
     public UnityEngine.AI.NavMeshAgent mob;
     public GameObject player;
+    public Animator anim;
     public bool aiOn;
+    public bool isSpitter;
 
     private bool sighted;
     private bool playerNearby;
     private float distanceToPlayer;
     public Transform playerLocation;
-
-    public float sightLength = 50.0f;
-    public float mobEyeHeight;
-    private float visionAngle;
     private float visionRange = 60.0f;
+    private float rotateSpeed = 1.0f;
 
+    public Transform center;
+    public float distanceToCenter;
+    public bool inGroup;
+    public bool attacking = false;
+    public bool meleeAttack = false;
+    public bool spitAttack = false;
 
     void Start ()
     {
+        aiOn = true;
+
+        anim = GetComponent<Animator>();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerLocation = player.transform;
+
         aiState = State.standby;
 
         StartCoroutine("FiniteStateMachine");
     }
 
-	void Update ()
+	void FixedUpdate ()
     {
-		
-	}
+        Debug.DrawRay(transform.position, transform.up * 5, Color.red);
+
+        distanceToPlayer = Vector3.Distance(playerLocation.position, transform.position);
+        distanceToCenter = Vector3.Distance(center.position, transform.position);
+        if (distanceToCenter >= 15)
+        {
+            inGroup = false;
+            aiState = State.regroup;
+        }
+    }
 
 
     public enum State
@@ -73,26 +95,75 @@ public class crawlerAI : MonoBehaviour {
 
     private void Standby()
     {
-        
+        Debug.Log("idle");
+        anim.SetTrigger("Idle");
+        if(distanceToPlayer <= visionRange)
+        {
+            aiState = State.moveto;
+        }
     }
 
     private void Attack()
     {
-        
+        Debug.Log("attack");
+        //Vector3 forward = transform.TransformDirection(Vector3.forward);
+        //Vector3 toTarget = playerLocation.position - transform.position;
+        //float angle = Vector3.Dot(forward, toTarget);
+
+        Vector3 targetDir = playerLocation.position - transform.position;
+        float step = rotateSpeed * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f));
+
+        //if (angle > 0.5f && angle < 1.5f)
+        if(distanceToPlayer <= 2)
+        {
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            gameObject.GetComponent<NavMeshObstacle>().enabled = true;
+            anim.SetTrigger("Attacking");
+        }
+
+        else
+        {
+            gameObject.GetComponent<NavMeshObstacle>().enabled = false;
+            gameObject.GetComponent<NavMeshAgent>().enabled = true;
+            aiState = State.moveto;
+        }
+
     }
 
     private void Spit()
     {
-        
+
     }
 
     private void Regroup()
     {
+        Debug.Log("regroup");
+        anim.SetTrigger("Moving");
 
+        if (distanceToCenter <= 13 )
+        {
+            aiState = State.moveto;
+        }
+        else
+        {
+            mob.destination = center.position;
+        }
     }
 
     private void Moveto()
     {
+        Debug.Log("moveto");
+        anim.SetTrigger("Moving");
+        mob.transform.LookAt(new Vector3(playerLocation.position.x, transform.position.y, playerLocation.position.z));
+        if (distanceToPlayer <= 4)
+        {
+            aiState = State.attack;
+        }
 
+        else
+        {
+            mob.destination = playerLocation.position;
+        }
     }
 }

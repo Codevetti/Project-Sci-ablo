@@ -1,4 +1,10 @@
 sceneSetups:
-- path: Assets/Scenes/MainScene.unity
+- path: Assets/Scenes/character.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/mob1.unity
+  isLoaded: 1
+  isActive: 0
+- path: Assets/Scenes/ManagerScene.unity
+  isLoaded: 1
+  isActive: 0

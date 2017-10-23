@@ -1,0 +1,11 @@
+
+*.log
+*.backup
+*.clust
+*.lt
+*.vis
+*.bakert
+Sci-ablo/Temp/UnityLockfile
+Sci-ablo/Library/shadercompiler-UnityShaderCompiler.exe0.log
+*.log
+Sci-ablo/Library/shadercompiler-UnityShaderCompiler.exe0.log

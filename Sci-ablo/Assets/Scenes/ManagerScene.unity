@@ -111,7 +111,52 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: b52c88e2f470e1245812619f8b1f4cbb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 73dbb38e9a9b34647b6db06b13ad1cca, type: 2}
+--- !u!1 &330087381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 330087382}
+  - component: {fileID: 330087383}
+  m_Layer: 0
+  m_Name: mobCenter
+  m_TagString: Mob Center
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &330087382
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 330087381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.1420856, y: 1, z: -5.9119678}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &330087383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 330087381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc84d23617b36d4f9a5b65159999749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mob: {fileID: 1675933014717498, guid: aa79df9909410a84ba09f1c5ffffa007, type: 2}
+  pos: {fileID: 0}
+  spawnDistance: 4
+  numMob: 0
+  mobs: []
 --- !u!1 &1819025706
 GameObject:
   m_ObjectHideFlags: 0

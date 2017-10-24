@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour {
 
         dist = agent.remainingDistance;
 
-        if(dist!=Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
+        if(dist!=Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1)
         {
             //arrived at destination
             anim.SetBool("Run", false);

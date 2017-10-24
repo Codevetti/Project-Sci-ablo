@@ -95,7 +95,7 @@ public class crawlerAI : MonoBehaviour {
 
     private void Standby()
     {
-        Debug.Log("idle");
+        //Debug.Log("idle");
         anim.SetTrigger("Idle");
         if(distanceToPlayer <= visionRange)
         {
@@ -105,7 +105,7 @@ public class crawlerAI : MonoBehaviour {
 
     private void Attack()
     {
-        Debug.Log("attack");
+        //Debug.Log("attack");
         //Vector3 forward = transform.TransformDirection(Vector3.forward);
         //Vector3 toTarget = playerLocation.position - transform.position;
         //float angle = Vector3.Dot(forward, toTarget);
@@ -115,7 +115,7 @@ public class crawlerAI : MonoBehaviour {
         transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f));
 
         //if (angle > 0.5f && angle < 1.5f)
-        if(distanceToPlayer <= 2)
+        if(distanceToPlayer <= 2.2 && player.GetComponent<CharacterController>().velocity.magnitude > 0)
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             gameObject.GetComponent<NavMeshObstacle>().enabled = true;
@@ -138,7 +138,7 @@ public class crawlerAI : MonoBehaviour {
 
     private void Regroup()
     {
-        Debug.Log("regroup");
+        //Debug.Log("regroup");
         anim.SetTrigger("Moving");
 
         if (distanceToCenter <= 13 )
@@ -153,17 +153,22 @@ public class crawlerAI : MonoBehaviour {
 
     private void Moveto()
     {
-        Debug.Log("moveto");
-        anim.SetTrigger("Moving");
+        //Debug.Log("moveto");
+        
         mob.transform.LookAt(new Vector3(playerLocation.position.x, transform.position.y, playerLocation.position.z));
-        if (distanceToPlayer <= 4)
+        if (distanceToPlayer <= 2.2)
         {
             aiState = State.attack;
         }
 
+        else if (inGroup == true)
+        {
+            anim.SetTrigger("Moving");
+            mob.destination = playerLocation.position;
+        }
         else
         {
-            mob.destination = playerLocation.position;
+            aiState = State.regroup;
         }
     }
 }

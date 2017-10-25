@@ -272,7 +272,9 @@
     <Compile Include="Assets\Scripts\level_Manager.cs" />
     <Compile Include="Assets\Scripts\mobFlock.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\SimpleRotate.cs" />
     <Compile Include="Assets\Scripts\TargetOrbitScript.cs" />
+    <Compile Include="Assets\Scripts\WeaponSocketScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

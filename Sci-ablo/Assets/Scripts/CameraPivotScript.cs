@@ -22,8 +22,20 @@ public class CameraPivotScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         
+        if (Input.GetKeyDown(KeyCode.Space) && fixedPos)
+        {
+            fixedPos = false;
+        }
+        else if(Input.GetKeyDown(KeyCode.Space) && !fixedPos)
+        {
+            fixedPos = true;
+        }
         
-        if(!fixedPos)
+    }
+
+    void Update()
+    {
+        if (!fixedPos)
         {//allow free movement
             if (Input.GetKey(KeyCode.W))
             {
@@ -46,20 +58,6 @@ public class CameraPivotScript : MonoBehaviour {
                 transform.Translate(directionD * Time.deltaTime * speed);
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && fixedPos)
-        {
-            fixedPos = false;
-        }
-        else if(Input.GetKeyDown(KeyCode.Space) && !fixedPos)
-        {
-            fixedPos = true;
-        }
-        
-    }
-
-    void Update()
-    {
         //if the position is fixed, lerp to the player's current position
         if (fixedPos)
         {

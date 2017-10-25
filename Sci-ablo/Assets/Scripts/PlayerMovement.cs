@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
 
     float dist;
 
+    bool setPath = false;
+
     Ray ray;
     RaycastHit hit;
     int layerMask;
@@ -33,20 +35,30 @@ public class PlayerMovement : MonoBehaviour {
             {
                 target.position = hit.point;
                 agent.SetDestination(target.position);
+                //if the agent can't reach the destination, then reset the agent path.
+                print(agent.pathStatus);
+                if(agent.pathStatus != NavMeshPathStatus.PathComplete)
+                {
+                    agent.ResetPath();
+                }
+                setPath = true;
             }
         }
 
         dist = agent.remainingDistance;
-
-        if(dist!=Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1)
+        if (setPath)
         {
-            //arrived at destination
-            anim.SetBool("Run", false);
-        }
-        else
-        {
-            if(!anim.GetBool(runId))
-                anim.SetBool("Run", true);
+            if (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1)
+            {
+                //arrived at destination
+                anim.SetBool("Run", false);
+                setPath = false;
+            }
+            else
+            {
+                if (!anim.GetBool(runId))
+                    anim.SetBool("Run", true);
+            }
         }
         
 	}

@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -269,10 +271,13 @@
     <Compile Include="Assets\Scripts\CameraOrbitScript.cs" />
     <Compile Include="Assets\Scripts\CameraPivotScript.cs" />
     <Compile Include="Assets\Scripts\crawlerAI.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\AlienAnimationsScript.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\AlienMaterialSwapper.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\PlayerMaterialSwapper.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\SimpleRotate.cs" />
     <Compile Include="Assets\Scripts\level_Manager.cs" />
     <Compile Include="Assets\Scripts\mobFlock.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\SimpleRotate.cs" />
     <Compile Include="Assets\Scripts\TargetOrbitScript.cs" />
     <Compile Include="Assets\Scripts\WeaponSocketScript.cs" />
   </ItemGroup>

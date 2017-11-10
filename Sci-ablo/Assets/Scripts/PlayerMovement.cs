@@ -37,17 +37,17 @@ public class PlayerMovement : MonoBehaviour {
                 agent.SetDestination(target.position);
                 //if the agent can't reach the destination, then reset the agent path.
                 print(agent.pathStatus);
-                if(agent.pathStatus != NavMeshPathStatus.PathComplete)
-                {
-                    agent.ResetPath();
-                }
+                //if(agent.pathStatus != NavMeshPathStatus.PathComplete)
+                //{
+                //    agent.ResetPath();
+                //}
                 setPath = true;
             }
         }
 
         dist = agent.remainingDistance;
-        if (setPath)
-        {
+        //if (setPath)
+        //{
             if (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1)
             {
                 //arrived at destination
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour {
                 if (!anim.GetBool(runId))
                     anim.SetBool("Run", true);
             }
-        }
+       // }
         
 	}
 

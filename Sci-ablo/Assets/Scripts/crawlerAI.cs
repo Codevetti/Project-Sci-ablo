@@ -11,8 +11,9 @@ public class crawlerAI : MonoBehaviour {
     public UnityEngine.AI.NavMeshAgent mob;
     public GameObject player;
     public Animator anim;
-    public bool aiOn;
+    private bool aiOn;
     public bool isSpitter;
+    public float mobHealth;
 
     private bool sighted;
     private bool playerNearby;
@@ -38,6 +39,8 @@ public class crawlerAI : MonoBehaviour {
         playerLocation = player.transform;
 
         aiState = State.standby;
+
+        GameObject.FindGameObjectWithTag("Health Manager").GetComponent<healthManager>().mobs.Add(this.gameObject);
 
         StartCoroutine("FiniteStateMachine");
     }

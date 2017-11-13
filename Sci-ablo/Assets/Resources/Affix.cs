@@ -11,6 +11,38 @@ public class Affix : MonoBehaviour
     //(Gravity Hammer, Super Sledge, etc...)
     //need to implement base stats for said items then apply the affix rolls in another method
 
+
+    //the excess use of strings is really ugly, should have just made some sort of table in xml to draw these from
+    string[] hammerBase = new string[]
+    {
+        "Sledgehammer", "Super Sledge", "Gravity Hammer"
+    };
+
+    string[] gunBase = new string[]
+    {
+        "Small Laser", "Mining Laser", "Death Ray"
+    };
+
+    string[] helmetBase = new string[]
+    {
+        "", "", ""
+    };
+
+    string[] chestBase = new string[]
+    {
+        "", "", ""
+    };
+
+    string[] gloveBase = new string[]
+    {
+        "", "", ""
+    };
+
+    string[] bootBase = new string[]
+    {
+        "", "", ""
+    };
+
     string[] WeaponPrefix = new string[]
     {
         "Weak ", "Average ", "Strong ", //+phys damage

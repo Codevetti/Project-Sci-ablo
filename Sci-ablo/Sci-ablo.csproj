@@ -272,13 +272,20 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Resources\Affix.cs" />
     <Compile Include="Assets\Resources\XMLManager.cs" />
+    <Compile Include="Assets\Scripts\attackEvent.cs" />
     <Compile Include="Assets\Scripts\CameraOrbitScript.cs" />
     <Compile Include="Assets\Scripts\CameraPivotScript.cs" />
     <Compile Include="Assets\Scripts\crawlerAI.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\AlienAnimationsScript.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\AlienMaterialSwapper.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\PlayerMaterialSwapper.cs" />
+    <Compile Include="Assets\Scripts\Demo Scripts\SimpleRotate.cs" />
+    <Compile Include="Assets\Scripts\healthManager.cs" />
     <Compile Include="Assets\Scripts\level_Manager.cs" />
     <Compile Include="Assets\Scripts\mobFlock.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\TargetOrbitScript.cs" />
+    <Compile Include="Assets\Scripts\WeaponSocketScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

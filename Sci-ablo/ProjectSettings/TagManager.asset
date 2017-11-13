@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mob Center
+  - Health Manager
   layers:
   - Default
   - TransparentFX

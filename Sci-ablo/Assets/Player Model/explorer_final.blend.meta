@@ -63,6 +63,7 @@ ModelImporter:
     100110: TORSO
     100112: upperarm_L
     100114: upperarm_R
+    100116: gun_lowpoly
     400000: Armature
     400002: ARMS
     400004: BASE
@@ -121,11 +122,13 @@ ModelImporter:
     400110: TORSO
     400112: upperarm_L
     400114: upperarm_R
+    400116: gun_lowpoly
     4300000: HELMET
     4300002: LEGS
     4300004: ARMS
     4300006: TORSO
     4300008: BASE
+    4300010: gun_lowpoly
     7400000: Default Take
     7400002: DefaultAction
     7400004: IdleAction
@@ -134,12 +137,16 @@ ModelImporter:
     7400010: HammerIdleAction
     7400012: HammerRunAction
     7400014: HammerAttackAction
+    7400016: GunAimAction
+    7400018: GunIdleAction
+    7400020: GunRunAction
     9500000: //RootNode
     13700000: ARMS
     13700002: BASE
     13700004: HELMET
     13700006: LEGS
     13700008: TORSO
+    13700010: gun_lowpoly
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -180,20 +187,26 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'HammerAttackAction' has import animation warnings
+    animationImportWarnings: "\nClip 'GunAimAction' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'thigh_L' has scale animation that will be
-      discarded.\n\nClip 'HammerRunAction' has import animation warnings that might
-      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
-      retargeting quality.\n\t'thigh_L' has scale animation that will be discarded.\n\t'thigh_R'
-      has scale animation that will be discarded.\n\nClip 'RunAction' has import animation
+      to improve retargeting quality.\n\t'ring1_R' has translation animation that
+      will be discarded.\n\nClip 'GunRunAction' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'thigh_L' has scale animation that will be discarded.\n\t'thigh_R'
+      has scale animation that will be discarded.\n\nClip 'HammerAttackAction' has
+      import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'thigh_L' has scale
+      animation that will be discarded.\n\nClip 'HammerRunAction' has import animation
       warnings that might lower retargeting quality:\nNote: Activate translation DOF
       on avatar to improve retargeting quality.\n\t'thigh_L' has scale animation that
       will be discarded.\n\t'thigh_R' has scale animation that will be discarded.\n\nClip
-      'RunAltAction' has import animation warnings that might lower retargeting quality:\nNote:
+      'RunAction' has import animation warnings that might lower retargeting quality:\nNote:
       Activate translation DOF on avatar to improve retargeting quality.\n\t'thigh_L'
       has scale animation that will be discarded.\n\t'thigh_R' has scale animation
-      that will be discarded.\n"
+      that will be discarded.\n\nClip 'RunAltAction' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'thigh_L' has scale animation that will be
+      discarded.\n\t'thigh_R' has scale animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -413,6 +426,90 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GunAimAction
+      takeName: GunAimAction
+      firstFrame: -1
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GunIdleAction
+      takeName: GunIdleAction
+      firstFrame: -1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GunRunAction
+      takeName: GunRunAction
+      firstFrame: -1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

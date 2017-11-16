@@ -266,6 +266,7 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Resources\Affix.cs" />
     <Compile Include="Assets\Resources\XMLManager.cs" />
+    <Compile Include="Assets\Scripts\attackEvent.cs" />
     <Compile Include="Assets\Scripts\CameraOrbitScript.cs" />
     <Compile Include="Assets\Scripts\CameraPivotScript.cs" />
     <Compile Include="Assets\Scripts\crawlerAI.cs" />
@@ -275,11 +276,12 @@
     <Compile Include="Assets\Scripts\Demo Scripts\SimpleRotate.cs" />
     <Compile Include="Assets\Scripts\GunScript.cs" />
     <Compile Include="Assets\Scripts\HammerScript.cs" />
+    <Compile Include="Assets\Scripts\healthManager.cs" />
     <Compile Include="Assets\Scripts\LaserScript.cs" />
     <Compile Include="Assets\Scripts\level_Manager.cs" />
     <Compile Include="Assets\Scripts\mobFlock.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerEquipmentManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\TargetOrbitScript.cs" />
   </ItemGroup>
   <ItemGroup>

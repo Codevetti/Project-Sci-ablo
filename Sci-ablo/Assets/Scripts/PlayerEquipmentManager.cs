@@ -8,14 +8,13 @@ public class PlayerEquipmentManager : MonoBehaviour {
     public bool hasWeapon = false;
     //takes the hammer or gun object and orients it in the players hand.
     //makes the weapon a child of the socket.
-
     public Transform hammerSocket;
     public Transform gunSocket;
-    public Transform hammer = null;
-    public Transform gun = null;
+    public Transform hammer;
+    public Transform gun;
     
     public Animator anim;
-    public MeshRenderer rend = null;
+    public MeshRenderer rend;
 
     //When a weapon is instantiated, the weapon's script will apply itself to the weapon variable.
     //That script will also determine whether the weapon is a gun or a hammer.
@@ -58,13 +57,19 @@ public class PlayerEquipmentManager : MonoBehaviour {
     
     void equipHammer()
     {
-        if (!rend.enabled)
+        if (rend)
         {
-            rend.enabled = true;
+            if (!rend.enabled)
+            {
+                rend.enabled = true;
+            }
         }
-        hammer.position = hammerSocket.position;
-        hammer.rotation = hammerSocket.rotation;
-        hammer.parent = hammerSocket;
+        if (hammer)
+        {
+            hammer.position = hammerSocket.position;
+            hammer.rotation = hammerSocket.rotation;
+            hammer.parent = hammerSocket;
+        }
         anim.SetBool("EquipHammer", true);
         hasWeapon = true;
         isGun = false;
@@ -72,13 +77,19 @@ public class PlayerEquipmentManager : MonoBehaviour {
 
     void equipGun()
     {
-        if (!rend.enabled)
+        if (rend)
         {
-            rend.enabled = true;
+            if (!rend.enabled)
+            {
+                rend.enabled = true;
+            }
         }
-        gun.position = gunSocket.position;
-        gun.rotation = gunSocket.rotation;
-        gun.parent = gunSocket;
+        if (gun)
+        {
+            gun.position = gunSocket.position;
+            gun.rotation = gunSocket.rotation;
+            gun.parent = gunSocket;
+        }
         anim.SetBool("EquipGun", true);
         hasWeapon = true;
         isHammer = false;
@@ -87,7 +98,10 @@ public class PlayerEquipmentManager : MonoBehaviour {
     void unequipWeapon()
     {
         //TODO: needs to be changed to destroy the object rather than just disabling the renderer.
-        rend.enabled = false;
+        if (rend)
+        {
+            rend.enabled = false;
+        }
         hasWeapon = false;
         
         if (isHammer)

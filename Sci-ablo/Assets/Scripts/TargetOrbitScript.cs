@@ -41,6 +41,6 @@ public class TargetOrbitScript : MonoBehaviour {
     {
         mouseWheel = Input.GetAxis("Mouse ScrollWheel");
         transform.LookAt(camPivot);
-        transform.Translate(Vector3.forward * mouseWheel* 30 * Time.deltaTime);
+        transform.Translate(Vector3.forward * mouseWheel* 120 * Time.deltaTime);
     }
 }

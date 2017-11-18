@@ -105,10 +105,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 1
-  controlID: 4303
+  controlID: 6335
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 948
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 4304
+  controlID: 6336
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 342}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 4258
+  controlID: 6337
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,14 +406,14 @@ MonoBehaviour:
     width: 984
     height: 927
   m_SceneLighting: 1
-  lastFramingTime: 306.9318785345499
+  lastFramingTime: 265.0961785911056
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.7103643, y: -15.628607, z: 34.82123}
+    m_Target: {x: -8.146732, y: -11.391762, z: 2.4772453}
     speed: 2
-    m_Value: {x: -2.7103643, y: -15.628607, z: 34.82123}
+    m_Value: {x: -8.146732, y: -11.391762, z: 2.4772453}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -436,13 +436,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.23910405, y: 0.021835236, z: -0.005379046, w: -0.9707335}
+    m_Target: {x: -0.52803874, y: 0.1983105, z: -0.12837565, w: -0.8157008}
     speed: 2
-    m_Value: {x: -0.23910405, y: 0.021835236, z: -0.005379046, w: -0.9707335}
+    m_Value: {x: -0.52803874, y: 0.1983105, z: -0.12837565, w: -0.8157009}
   m_Size:
-    m_Target: 55.794334
+    m_Target: 19.48317
     speed: 2
-    m_Value: 55.794334
+    m_Value: 19.48317
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -558,9 +558,9 @@ MonoBehaviour:
     height: 927
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: a6fbffff00000000fa2b0000
+    m_SelectedIDs: 5ea1eaff
+    m_LastClickedID: -1400482
+    m_ExpandedIDs: 5ea1eaff5ca6eaff28ddfffffcfaffff00000000e02f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -609,7 +609,7 @@ MonoBehaviour:
     y: 91
     width: 636
     height: 546
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 606.9551}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 237
@@ -739,19 +739,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Textures
+    - Assets/Models/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Textures
+  - Assets/Models/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Salvetori\Documents\GitHub\Project-Sci-ablo\Sci-ablo
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b62a0000
-    m_LastClickedID: 10934
-    m_ExpandedIDs: 00000000f62700001e280000202a00006e2a00004e2e000000ca9a3bffffff7f
+    m_SelectedIDs: ca2d0000
+    m_LastClickedID: 11722
+    m_ExpandedIDs: 00000000382c0000622c00007c2e0000ca2e00008c32000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -779,7 +779,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f62700001e280000202a00006e2a00004e2e000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000382c0000622c00007c2e0000ca2e00008c32000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -831,7 +831,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 163}
+    m_ScrollPosition: {x: 0, y: 70}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 115
 --- !u!114 &23

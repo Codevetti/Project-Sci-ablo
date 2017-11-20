@@ -22,50 +22,50 @@ public class CameraPivotScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         
-        if (Input.GetKeyDown(KeyCode.Space) && fixedPos)
-        {
-            fixedPos = false;
-        }
-        else if(Input.GetKeyDown(KeyCode.Space) && !fixedPos)
-        {
-            fixedPos = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) && fixedPos)
+        //{
+        //    fixedPos = false;
+        //}
+        //else if(Input.GetKeyDown(KeyCode.Space) && !fixedPos)
+        //{
+        //    fixedPos = true;
+        //}
         
     }
 
     void Update()
     {
-        if (!fixedPos)
-        {//allow free movement
-            if (Input.GetKey(KeyCode.W))
-            {
-                directionW = new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z);
-                transform.Translate(directionW * Time.deltaTime * speed);
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                directionA = new Vector3(-cam.transform.right.x, 0, -cam.transform.right.z);
-                transform.Translate(directionA * Time.deltaTime * speed);
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                directionS = new Vector3(-cam.transform.forward.x, 0, -cam.transform.forward.z);
-                transform.Translate(directionS * Time.deltaTime * speed);
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                directionD = new Vector3(cam.transform.right.x, 0, cam.transform.right.z);
-                transform.Translate(directionD * Time.deltaTime * speed);
-            }
-        }
+        //if (!fixedPos)
+        //{//allow free movement
+        //    if (Input.GetKey(KeyCode.W))
+        //    {
+        //        directionW = new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z);
+        //        transform.Translate(directionW * Time.deltaTime * speed);
+        //    }
+        //    if (Input.GetKey(KeyCode.A))
+        //    {
+        //        directionA = new Vector3(-cam.transform.right.x, 0, -cam.transform.right.z);
+        //        transform.Translate(directionA * Time.deltaTime * speed);
+        //    }
+        //    if (Input.GetKey(KeyCode.S))
+        //    {
+        //        directionS = new Vector3(-cam.transform.forward.x, 0, -cam.transform.forward.z);
+        //        transform.Translate(directionS * Time.deltaTime * speed);
+        //    }
+        //    if (Input.GetKey(KeyCode.D))
+        //    {
+        //        directionD = new Vector3(cam.transform.right.x, 0, cam.transform.right.z);
+        //        transform.Translate(directionD * Time.deltaTime * speed);
+        //    }
+        //}
         //if the position is fixed, lerp to the player's current position
-        if (fixedPos)
-        {
-            newPos.x = Mathf.Lerp(transform.position.x, playerTransform.position.x, Time.deltaTime * 3);
-            newPos.y = Mathf.Lerp(transform.position.y, playerTransform.position.y + 1, Time.deltaTime * 3);
-            newPos.z = Mathf.Lerp(transform.position.z, playerTransform.position.z, Time.deltaTime * 3);
-            transform.position = newPos;
-        }
+        //if (fixedPos)
+        //{
+        newPos.x = Mathf.Lerp(transform.position.x, playerTransform.position.x, Time.deltaTime * 3);
+        newPos.y = Mathf.Lerp(transform.position.y, playerTransform.position.y + 1, Time.deltaTime * 3);
+        newPos.z = Mathf.Lerp(transform.position.z, playerTransform.position.z, Time.deltaTime * 3);
+        transform.position = newPos;
+        //}
     }
 
     public void fixCamPosition(bool fixedPos)

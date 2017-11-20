@@ -24,15 +24,17 @@ public class PlayerController : MonoBehaviour {
     Ray ray;
     RaycastHit hit;
     int floorMask;
-    int layerMaskEnemy;
+    int enemyMask;
     int runId = Animator.StringToHash("Run");
+
+    bool damageCoroutine;
     
     // Use this for initialization
     void Start ()
     {
 
         floorMask = LayerMask.GetMask("Floor");
-        layerMaskEnemy = LayerMask.GetMask("Enemy");
+        enemyMask = LayerMask.GetMask("Enemy");
 
     }
 	
@@ -61,7 +63,11 @@ public class PlayerController : MonoBehaviour {
             //do hammer stuff
             MeleeAttack();
         }
-
+        
+        if(Input.GetMouseButtonDown(1) && equipmentManager.equipWeapon && equipmentManager.isGun)
+        {
+            laserScript.Reset();
+        }
         if (Input.GetMouseButton(1) && equipmentManager.equipWeapon && equipmentManager.isGun)
         {
             //do gun stuff
@@ -130,7 +136,7 @@ public class PlayerController : MonoBehaviour {
         //set the destination as the enemy
         //after the player is within one meter attack
         ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, layerMaskEnemy))
+        if (Physics.Raycast(ray, out hit, enemyMask))
         {
             if (hit.transform.tag == "Mob")
             {
@@ -147,6 +153,7 @@ public class PlayerController : MonoBehaviour {
     void Shoot()
     {
         ray = cam.ScreenPointToRay(Input.mousePosition);
+        //find the point at which the player should be aiming the weapon.
         if (Physics.Raycast(ray, out hit, floorMask))
         {
             //enemyTarget.position = hit.point;
@@ -156,6 +163,17 @@ public class PlayerController : MonoBehaviour {
             setPath = false;
             agent.isStopped = true;
             anim.SetBool("Aim", true);
+        }
+
+        Vector3 gunBarrelZero = new Vector3(equipmentManager.gScript.gunBarrel.position.x, 0, equipmentManager.gScript.gunBarrel.position.z);
+        RaycastHit[] enemyInfo = Physics.CapsuleCastAll(equipmentManager.gScript.gunBarrel.position, gunBarrelZero, 0.3f, equipmentManager.gScript.gunBarrel.forward, 50f, enemyMask);
+        Debug.DrawLine(equipmentManager.gScript.gunBarrel.position, gunBarrelZero, Color.red);
+        if (enemyInfo != null)
+        {
+            if (!damageCoroutine)
+            {
+                StartCoroutine(LaserHit(enemyInfo));
+            }
         }
     }
 
@@ -179,6 +197,7 @@ public class PlayerController : MonoBehaviour {
     public void ActivateLaser()
     {
         laserScript.activate = true;
+        laserScript.PlayAudio();
     }
 
     void RotateTowardsEnemy()
@@ -195,4 +214,16 @@ public class PlayerController : MonoBehaviour {
         enemyDirection.y = 0f;
         transform.forward = Vector3.Lerp(transform.forward, enemyDirection, 5 * Time.deltaTime);
     }
+
+    IEnumerator LaserHit(RaycastHit [] raycastHits)
+    {
+        damageCoroutine = true;
+        foreach(RaycastHit raycastHit in raycastHits)
+        {
+            healthManager.damageHealth(raycastHit.collider.gameObject, 15);
+        }
+        yield return new WaitForSeconds(.3f);
+        damageCoroutine = false;
+    }
+    
 }

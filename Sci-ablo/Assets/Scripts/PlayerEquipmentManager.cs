@@ -21,6 +21,8 @@ public class PlayerEquipmentManager : MonoBehaviour {
     public bool isGun;
     public bool isHammer;
 
+    public GunScript gScript;
+
     // Update is called once per frame
     void Update()
     {

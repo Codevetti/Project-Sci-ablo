@@ -219,6 +219,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyHealthScript.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -275,6 +276,7 @@
     <Compile Include="Assets\Scripts\Demo Scripts\PlayerMaterialSwapper.cs" />
     <Compile Include="Assets\Scripts\Demo Scripts\SimpleRotate.cs" />
     <Compile Include="Assets\Scripts\FootstepScript.cs" />
+    <Compile Include="Assets\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\Scripts\GunScript.cs" />
     <Compile Include="Assets\Scripts\HammerScript.cs" />
     <Compile Include="Assets\Scripts\healthManager.cs" />

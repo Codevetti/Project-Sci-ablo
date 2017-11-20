@@ -75,6 +75,11 @@ public class healthManager : MonoBehaviour
             if (character.GetComponent<crawlerAI>().mobHealth > 0)
             {
                 character.GetComponent<crawlerAI>().mobHealth -= damage;
+
+                if(character.GetComponent<crawlerAI>().mobHealth <= 0)
+                {
+                    DestroyObject(character);
+                }
             }
             else
             {

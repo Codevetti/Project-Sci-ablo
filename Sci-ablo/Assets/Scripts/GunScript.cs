@@ -6,6 +6,7 @@ public class GunScript : MonoBehaviour {
 
     GameObject player;
     PlayerEquipmentManager equipmentManager;
+    public Transform gunBarrel;
 
     void Start()
     {
@@ -14,7 +15,9 @@ public class GunScript : MonoBehaviour {
         {
             player = GameObject.FindGameObjectWithTag("Player");
             equipmentManager = player.GetComponent<PlayerEquipmentManager>();
+            equipmentManager.gScript = this;
         }
+        gunBarrel = transform.GetChild(0);
     }
 
     void Update()

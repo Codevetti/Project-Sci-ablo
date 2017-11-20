@@ -26,12 +26,12 @@ public class TargetOrbitScript : MonoBehaviour {
         {
             if (mouseX < 0)
             {
-                transform.RotateAround(camPivot.position, -transform.up, Time.deltaTime * camRotationSpeed);
+                transform.RotateAround(camPivot.position, -Vector3.up, Time.deltaTime * camRotationSpeed);
             }
             else if (mouseX > 0)
             {
                 // transform.Translate(Vector3.right * camRotationSpeed * Time.deltaTime);
-                transform.RotateAround(camPivot.position, transform.up, Time.deltaTime * camRotationSpeed);
+                transform.RotateAround(camPivot.position, Vector3.up, Time.deltaTime * camRotationSpeed);
             }
         }
         

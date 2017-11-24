@@ -19,7 +19,7 @@ public class CameraOrbitScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //position camera behind player, with a set height value.
-        camPosition = new Vector3(-camPivot.forward.x * camRadius, camPivot.position.y + camHeight, -camPivot.forward.z* camRadius);
+        camPosition = new Vector3(-camPivot.forward.x * camRadius, camPivot.position.y + camHeight, -camPivot.forward.z * camRadius);
         transform.position = camPosition;
 	}
 	

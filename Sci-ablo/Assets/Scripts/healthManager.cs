@@ -7,6 +7,7 @@ public class healthManager : MonoBehaviour
 
     public GameObject player;
     public List<GameObject> mobs;
+    public ParticleSystem mobBloodEffect;
 
     private float maxPlayerHealth = 500;
     private float maxPlayerMana = 100;
@@ -75,7 +76,7 @@ public class healthManager : MonoBehaviour
             if (character.GetComponent<crawlerAI>().mobHealth > 0)
             {
                 character.GetComponent<crawlerAI>().mobHealth -= damage;
-
+                mobBloodEffect.Play();
                 if(character.GetComponent<crawlerAI>().mobHealth <= 0)
                 {
                     DestroyObject(character);

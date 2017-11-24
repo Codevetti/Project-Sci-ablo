@@ -5,6 +5,7 @@ using UnityEngine;
 public class TargetOrbitScript : MonoBehaviour {
 
     public Transform camPivot;
+    GameObject player;
     Vector3 camPosition;
     Vector3 camDirection;
     public float camRadius;
@@ -14,6 +15,7 @@ public class TargetOrbitScript : MonoBehaviour {
     float mouseWheel;
     // Use this for initialization
     void Start () {
+        
         camPosition = new Vector3(-camPivot.forward.x * camRadius, camPivot.position.y + camHeight, -camPivot.forward.z * camRadius);
         transform.position = camPosition;
     }

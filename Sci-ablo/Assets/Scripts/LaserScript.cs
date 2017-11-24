@@ -19,8 +19,8 @@ public class LaserScript : MonoBehaviour {
 
     float pitchStart = 0.3f;
     float pitchLevel;
-    
 
+    public Light gunLight;
     void Start()
     {
         lineRen = GetComponent<LineRenderer>();
@@ -33,6 +33,7 @@ public class LaserScript : MonoBehaviour {
             playerController = player.GetComponent<PlayerController>();
             playerController.laserScript = this;
         }
+        gunLight = GetComponentInChildren<Light>();
     }
 
 	// Update is called once per frame

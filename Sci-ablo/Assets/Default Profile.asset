@@ -25,13 +25,13 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       excludeSkybox: 0
   antialiasing:
     m_Enabled: 1
     m_Settings:
-      method: 1
+      method: 0
       fxaaSettings:
         preset: 2
       taaSettings:

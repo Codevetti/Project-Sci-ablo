@@ -29,6 +29,10 @@ public class crawlerAI : MonoBehaviour {
     public bool meleeAttack = false;
     public bool spitAttack = false;
 
+    ParticleSystem bloodEffect;
+
+    healthManager healthManager;
+
     void Start ()
     {
         aiOn = true;
@@ -40,7 +44,14 @@ public class crawlerAI : MonoBehaviour {
 
         aiState = State.standby;
 
-        GameObject.FindGameObjectWithTag("Health Manager").GetComponent<healthManager>().mobs.Add(this.gameObject);
+        bloodEffect = transform.GetComponentInChildren<ParticleSystem>();
+
+        //GameObject.FindGameObjectWithTag("Health Manager").GetComponent<healthManager>().mobs.Add(this.gameObject);
+
+        healthManager = GameObject.FindGameObjectWithTag("Health Manager").GetComponent<healthManager>();
+
+        healthManager.mobs.Add(this.gameObject);
+        healthManager.mobBloodEffect = bloodEffect;
 
         StartCoroutine("FiniteStateMachine");
     }

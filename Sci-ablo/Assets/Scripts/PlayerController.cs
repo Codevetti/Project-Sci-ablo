@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public LaserScript laserScript;
     
     float dist;
+    public float hammerDamage; //set this value
 
     bool setPath = true;
     bool attacking = false;
@@ -28,13 +29,17 @@ public class PlayerController : MonoBehaviour {
     int runId = Animator.StringToHash("Run");
 
     bool damageCoroutine;
+
+    public Transform meleeAudio; //needs to be set
+    AudioSource[] meleeHits;
     
     // Use this for initialization
     void Start ()
     {
-
         floorMask = LayerMask.GetMask("Floor");
         enemyMask = LayerMask.GetMask("Enemy");
+
+        meleeHits = meleeAudio.GetComponents<AudioSource>();
 
     }
 	
@@ -61,12 +66,13 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetMouseButtonDown(1) && equipmentManager.equipWeapon && equipmentManager.isHammer)
         {
             //do hammer stuff
-            MeleeAttack();
+            SetUpMelee();
         }
         
         if(Input.GetMouseButtonDown(1) && equipmentManager.equipWeapon && equipmentManager.isGun)
         {
             laserScript.Reset();
+            
         }
         if (Input.GetMouseButton(1) && equipmentManager.equipWeapon && equipmentManager.isGun)
         {
@@ -78,6 +84,7 @@ public class PlayerController : MonoBehaviour {
             rotate = false;
             isShooting = false;
             laserScript.activate = false;
+            laserScript.gunLight.enabled = false;
             anim.SetBool("Aim", false);
         }
 
@@ -99,14 +106,9 @@ public class PlayerController : MonoBehaviour {
             if (attacking && equipmentManager.isHammer)
             {
                 //check if within two meters of destination, then attack
-                if(agent.remainingDistance <= 2f && agent.hasPath)
+                if(agent.remainingDistance <= 2f)
                 {
-                    //Debug.Log("attack now");
-                    attacking = false;
-                    setPath = false;
-                    rotate = true;
-                    agent.isStopped = true;
-                    anim.SetTrigger("Attack");
+                    MeleeAttack();
                 }
             }
             //if the path is impossible or completed
@@ -131,7 +133,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void MeleeAttack()
+    void SetUpMelee()
     {
         //set the destination as the enemy
         //after the player is within one meter attack
@@ -141,13 +143,28 @@ public class PlayerController : MonoBehaviour {
             if (hit.transform.tag == "Mob")
             {
                 enemyTarget = hit.transform;
-                //target.transform.position = hit.transform.position;
                 agent.SetDestination(enemyTarget.position);
                 setPath = true;
                 attacking = true;
                 agent.isStopped = false;
+
+                //find the actual distance from the enemy origin to the player origin. If that distance is less than 2.25 meters then attack the enemy.
+                float distanceToEnemy = Vector3.Distance(transform.position, enemyTarget.position);
+                if(distanceToEnemy < 2.25f)
+                {
+                    MeleeAttack();
+                }
             }
         }
+    }
+
+    void MeleeAttack()
+    {
+        attacking = false;
+        setPath = false;
+        rotate = true;
+        agent.isStopped = true;
+        anim.SetTrigger("Attack");
     }
 
     void Shoot()
@@ -191,12 +208,14 @@ public class PlayerController : MonoBehaviour {
         //Debug.Log(message);
         attacking = false;
         rotate = false;
-        healthManager.damageHealth(enemyTarget.gameObject, 50);
+        healthManager.damageHealth(enemyTarget.gameObject, hammerDamage);
+        PlayMeleeHit();
     }
 
     public void ActivateLaser()
     {
         laserScript.activate = true;
+        laserScript.gunLight.enabled = true;
         laserScript.PlayAudio();
     }
 
@@ -224,6 +243,27 @@ public class PlayerController : MonoBehaviour {
         }
         yield return new WaitForSeconds(.3f);
         damageCoroutine = false;
+    }
+
+    void PlayMeleeHit()
+    {
+        float rand = Random.Range(0, 40);
+        if(rand >= 0 && rand < 10)
+        {
+            meleeHits[0].Play();
+        }
+        else if(rand >= 10 && rand < 20)
+        {
+            meleeHits[1].Play();
+        }
+        else if(rand >= 20 && rand < 30)
+        {
+            meleeHits[2].Play();
+        }
+        else
+        {
+            meleeHits[3].Play();
+        }
     }
     
 }

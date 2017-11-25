@@ -9343,6 +9343,14 @@ Prefab:
       propertyPath: m_Name
       value: gun_equipment
       objectReference: {fileID: 0}
+    - target: {fileID: 1833974622240956, guid: ff428f759bcb15d458fca0455ab51b3d, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577871121006456, guid: ff428f759bcb15d458fca0455ab51b3d, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff428f759bcb15d458fca0455ab51b3d, type: 2}
   m_IsPrefabParent: 0
@@ -13609,6 +13617,10 @@ Prefab:
       propertyPath: m_Radius
       value: 1.08
       objectReference: {fileID: 0}
+    - target: {fileID: 1873269240019470, guid: 6d0aafcbd39a6aa42aa8a2b094b55e98, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d0aafcbd39a6aa42aa8a2b094b55e98, type: 2}
   m_IsPrefabParent: 0
@@ -15767,7 +15779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578433443}
   - component: {fileID: 1578433444}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

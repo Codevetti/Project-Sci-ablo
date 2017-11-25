@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95055268320859014}
   - component: {fileID: 114741922287529314}
   - component: {fileID: 135566729050786470}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: hammer_equipment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873269240019470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0153959, y: 1.366, z: -0.051}
+  m_LocalPosition: {x: 2.75, y: 1, z: 0.9108705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16de314893785ee4cb45a3408134ed0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesHit: []
 --- !u!135 &135566729050786470
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -123,5 +124,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 1.08
   m_Center: {x: 0, y: 0.9, z: 0}

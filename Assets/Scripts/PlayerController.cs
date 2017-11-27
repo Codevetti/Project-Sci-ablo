@@ -8,13 +8,15 @@ public class PlayerController : MonoBehaviour {
     
     public Animator anim;
     public Transform target;
-    
+
+    [SerializeField]
     private Transform enemyTarget;
-    
+
+
     public NavMeshAgent agent;
     public Camera cam;
-    public PlayerEquipmentManager equipmentManager; //set this value
-    public healthManager healthManager; 
+    public PlayerEquipmentManager equipmentManager;
+    public healthManager healthManager;
     public LaserScript laserScript;
     
     float dist;
@@ -34,9 +36,7 @@ public class PlayerController : MonoBehaviour {
     bool damageCoroutine;
 
     public Transform meleeAudio; //needs to be set
-    public Transform gunAudio; //needs to be set
     AudioSource[] meleeHits;
-    AudioSource[] gunHits;
     
     // Use this for initialization
     void Start ()
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
         enemyMask = LayerMask.GetMask("Enemy");
 
         meleeHits = meleeAudio.GetComponents<AudioSource>();
-        gunHits = gunAudio.GetComponents<AudioSource>();
+
     }
 	
 	// Update is called once per frame
@@ -252,7 +252,6 @@ public class PlayerController : MonoBehaviour {
         foreach(RaycastHit raycastHit in raycastHits)
         {
             healthManager.damageHealth(raycastHit.collider.gameObject, 15);
-            PlayGunHit();
         }
         yield return new WaitForSeconds(.3f);
         damageCoroutine = false;
@@ -276,19 +275,6 @@ public class PlayerController : MonoBehaviour {
         else
         {
             meleeHits[3].Play();
-        }
-    }
-
-    void PlayGunHit()
-    {
-        float rand = Random.Range(0, 20);
-        if (rand >= 0 && rand < 10)
-        {
-            gunHits[0].Play();
-        }
-        else
-        {
-            gunHits[1].Play();
         }
     }
     

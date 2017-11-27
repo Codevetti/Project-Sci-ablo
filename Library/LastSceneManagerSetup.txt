@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/WeaponTestScene.unity
+- path: Assets/Inventory/BetterInventory.unity
   isLoaded: 1
   isActive: 1

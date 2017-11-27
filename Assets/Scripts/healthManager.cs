@@ -7,7 +7,8 @@ public class healthManager : MonoBehaviour
 
     public GameObject player;
     public List<GameObject> mobs;
-    public ParticleSystem mobBloodEffect;
+    public List<ParticleSystem> mobBloodEffect;
+    public List<AudioSource> mobDeathSound;
 
     private float maxPlayerHealth = 500;
     private float maxPlayerMana = 100;
@@ -77,14 +78,17 @@ public class healthManager : MonoBehaviour
             if (character.GetComponent<crawlerAI>().mobHealth > 0)
             {
                 character.GetComponent<crawlerAI>().mobHealth -= damage;
-                mobBloodEffect.Play();
+                character.GetComponent<crawlerAI>().bloodEffect.Play();
                 if(character.GetComponent<crawlerAI>().mobHealth <= 0)
                 {
+                    character.GetComponent<crawlerAI>().crawlerAudio[0].Play();
                     DestroyObject(character);
                 }
             }
             else
             {
+                character.GetComponent<crawlerAI>().bloodEffect.Play();
+                character.GetComponent<crawlerAI>().crawlerAudio[0].Play();
                 DestroyObject(character);
                 //determine if loot dropped -- determineLoot(mobRarity rarity) //mobRarity being an enum
                 //instantiate loot object
@@ -94,6 +98,7 @@ public class healthManager : MonoBehaviour
         else
         {
             //something is wrong
+            Debug.Log("Health Manager: Error");
         }
     }
 }

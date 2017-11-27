@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Sci-ablo", "Project-Sci-ablo.csproj", "{F7A4C69C-D6EE-40FB-D6EF-951628C8914C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Sci-ablo.Editor", "Project-Sci-ablo.Editor.csproj", "{B2F821AF-A427-36E6-6247-3C7A46D60BBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7A4C69C-D6EE-40FB-D6EF-951628C8914C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A4C69C-D6EE-40FB-D6EF-951628C8914C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A4C69C-D6EE-40FB-D6EF-951628C8914C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A4C69C-D6EE-40FB-D6EF-951628C8914C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F821AF-A427-36E6-6247-3C7A46D60BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F821AF-A427-36E6-6247-3C7A46D60BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F821AF-A427-36E6-6247-3C7A46D60BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F821AF-A427-36E6-6247-3C7A46D60BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

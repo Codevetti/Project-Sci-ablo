@@ -12,15 +12,15 @@ public class InventoryManager : Inventory{
 
 		if (!items [index].isEquipped) {
 			if (items [index].isHammer) {
-				manager.equipHammer ();
+				manager.equipHammer();
 			} else if (items [index].isGun) {
-				manager.equipGun ();
+				manager.equipGun();
 			} else {
 				Debug.Log ("No Item In Slot");
 			}
 		} else {
 
-			manager.unequipWeapon ();
+			manager.unequipWeapon();
 		}
 	}
 

@@ -46,7 +46,7 @@ public class PlayerEquipmentManager : MonoBehaviour {
         }
     }
 
-    void setUpWeapon()
+    public void setUpWeapon()
     {
         if (isHammer)
         {
@@ -58,7 +58,7 @@ public class PlayerEquipmentManager : MonoBehaviour {
         }
     }
     
-    void equipHammer()
+    public void equipHammer()
     {
         if (rend)
         {
@@ -78,7 +78,7 @@ public class PlayerEquipmentManager : MonoBehaviour {
         isGun = false;
     }
 
-    void equipGun()
+    public void equipGun()
     {
         if (rend)
         {
@@ -98,7 +98,7 @@ public class PlayerEquipmentManager : MonoBehaviour {
         isHammer = false;
     }
 
-    void unequipWeapon()
+    public void unequipWeapon()
     {
         //TODO: needs to be changed to destroy the object rather than just disabling the renderer.
         if (rend)

@@ -29,9 +29,13 @@ public class crawlerAI : MonoBehaviour {
     public bool meleeAttack = false;
     public bool spitAttack = false;
 
+<<<<<<< HEAD
     //for when the enemy is damaged
     public ParticleSystem bloodEffect;
     public AudioSource  [] crawlerAudio;
+=======
+    ParticleSystem bloodEffect;
+>>>>>>> parent of c1af8c25... Opening Cutscene
 
     healthManager healthManager;
 
@@ -47,13 +51,16 @@ public class crawlerAI : MonoBehaviour {
         aiState = State.standby;
 
         bloodEffect = transform.GetComponentInChildren<ParticleSystem>();
-        crawlerAudio = transform.GetComponentsInChildren<AudioSource>();
 
         //GameObject.FindGameObjectWithTag("Health Manager").GetComponent<healthManager>().mobs.Add(this.gameObject);
 
         healthManager = GameObject.FindGameObjectWithTag("Health Manager").GetComponent<healthManager>();
 
         healthManager.mobs.Add(this.gameObject);
+<<<<<<< HEAD
+=======
+        healthManager.mobBloodEffect = bloodEffect;
+>>>>>>> parent of c1af8c25... Opening Cutscene
 
         StartCoroutine("FiniteStateMachine");
     }

@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
+<<<<<<< HEAD
+- path: Assets/Inventory/BetterInventory.unity
+=======
 - path: Assets/Scenes/Main.unity
+>>>>>>> parent of c1af8c25... Opening Cutscene
+=======
+- path: Assets/Scenes/Main.unity
+>>>>>>> parent of c1af8c25... Opening Cutscene
   isLoaded: 1
   isActive: 1

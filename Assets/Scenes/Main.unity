@@ -10813,8 +10813,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2030006602}
   mobs: []
+<<<<<<< HEAD
   mobBloodEffect: []
   mobDeathSound: []
+=======
+<<<<<<< HEAD
+  mobBloodEffect: []
+  mobDeathSound: []
+=======
+  mobBloodEffect: {fileID: 0}
+>>>>>>> parent of c1af8c25... Opening Cutscene
+>>>>>>> 62a280431004ddbf91eebc52032ff00f908737d3
   playerHealth: 100
   playerMana: 100
 --- !u!4 &1163192297

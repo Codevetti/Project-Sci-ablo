@@ -8,12 +8,29 @@ public class PlayerController : MonoBehaviour {
     
     public Animator anim;
     public Transform target;
+<<<<<<< HEAD
     
     [Header("")]
     [SerializeField]
     private Transform enemyTarget;
     
     [Header("")]
+=======
+<<<<<<< HEAD
+    
+    [Header("")]
+    [SerializeField]
+    private Transform enemyTarget;
+    
+    [Header("")]
+=======
+
+    [SerializeField]
+    private Transform enemyTarget;
+
+
+>>>>>>> parent of c1af8c25... Opening Cutscene
+>>>>>>> 62a280431004ddbf91eebc52032ff00f908737d3
     public NavMeshAgent agent;
     public Camera cam;
     public PlayerEquipmentManager equipmentManager; //set this value

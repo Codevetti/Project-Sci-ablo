@@ -7,8 +7,17 @@ public class healthManager : MonoBehaviour
 
     public GameObject player;
     public List<GameObject> mobs;
+<<<<<<< HEAD
     public List<ParticleSystem> mobBloodEffect;
     public List<AudioSource> mobDeathSound;
+=======
+<<<<<<< HEAD
+    public List<ParticleSystem> mobBloodEffect;
+    public List<AudioSource> mobDeathSound;
+=======
+    public ParticleSystem mobBloodEffect;
+>>>>>>> parent of c1af8c25... Opening Cutscene
+>>>>>>> 62a280431004ddbf91eebc52032ff00f908737d3
 
     private float maxPlayerHealth = 500;
     private float maxPlayerMana = 100;
@@ -81,14 +90,29 @@ public class healthManager : MonoBehaviour
                 character.GetComponent<crawlerAI>().bloodEffect.Play();
                 if(character.GetComponent<crawlerAI>().mobHealth <= 0)
                 {
+<<<<<<< HEAD
                     character.GetComponent<crawlerAI>().crawlerAudio[0].Play();
+=======
+<<<<<<< HEAD
+                    character.GetComponent<crawlerAI>().crawlerAudio[0].Play();
+=======
+>>>>>>> parent of c1af8c25... Opening Cutscene
+>>>>>>> 62a280431004ddbf91eebc52032ff00f908737d3
                     DestroyObject(character);
                 }
             }
             else
             {
+<<<<<<< HEAD
                 character.GetComponent<crawlerAI>().bloodEffect.Play();
                 character.GetComponent<crawlerAI>().crawlerAudio[0].Play();
+=======
+<<<<<<< HEAD
+                character.GetComponent<crawlerAI>().bloodEffect.Play();
+                character.GetComponent<crawlerAI>().crawlerAudio[0].Play();
+=======
+>>>>>>> parent of c1af8c25... Opening Cutscene
+>>>>>>> 62a280431004ddbf91eebc52032ff00f908737d3
                 DestroyObject(character);
                 //determine if loot dropped -- determineLoot(mobRarity rarity) //mobRarity being an enum
                 //instantiate loot object

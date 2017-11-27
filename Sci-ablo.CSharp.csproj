@@ -284,7 +284,6 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\CutsceneManager.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -349,7 +348,6 @@
     <Compile Include="Assets\Scripts\Demo Scripts\SimpleRotate.cs" />
     <Compile Include="Assets\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthScript.cs" />
-    <Compile Include="Assets\Scripts\FadeController.cs" />
     <Compile Include="Assets\Scripts\FootstepScript.cs" />
     <Compile Include="Assets\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\Scripts\GunScript.cs" />

@@ -8,6 +8,7 @@ public class healthManager : MonoBehaviour
     public GameObject player;
     public List<GameObject> mobs;
     public ParticleSystem mobBloodEffect;
+    public AudioSource mobDeathSound;
 
     private float maxPlayerHealth = 500;
     private float maxPlayerMana = 100;
@@ -80,11 +81,14 @@ public class healthManager : MonoBehaviour
                 mobBloodEffect.Play();
                 if(character.GetComponent<crawlerAI>().mobHealth <= 0)
                 {
+                    mobDeathSound.Play();
                     DestroyObject(character);
                 }
             }
             else
             {
+                mobBloodEffect.Play();
+                mobDeathSound.Play();
                 DestroyObject(character);
                 //determine if loot dropped -- determineLoot(mobRarity rarity) //mobRarity being an enum
                 //instantiate loot object

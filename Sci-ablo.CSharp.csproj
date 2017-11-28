@@ -296,6 +296,11 @@
     <Compile Include="Assets\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\Inventory\Item.cs" />
     <Compile Include="Assets\Inventory\Playerhealth.cs" />
+    <Compile Include="Assets\Map\Scripts\InnerMap.cs" />
+    <Compile Include="Assets\Map\Scripts\MapArrow.cs" />
+    <Compile Include="Assets\Map\Scripts\MapCanvasController.cs" />
+    <Compile Include="Assets\Map\Scripts\MapMarker.cs" />
+    <Compile Include="Assets\Map\Scripts\MarkerGroup.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

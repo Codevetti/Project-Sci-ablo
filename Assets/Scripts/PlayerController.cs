@@ -265,12 +265,13 @@ public class PlayerController : MonoBehaviour {
     {
         foreach (Collider col in equipmentManager.hScript.enemiesHit)
         {
-            if(col.gameObject != enemyTarget.gameObject)
+            //if the enemy collider is not the player and the selected enemy.
+            if(col.gameObject != enemyTarget.gameObject && col.gameObject != transform.gameObject)
             {
-            healthManager.damageHealth(col.gameObject, hammerDamage / 2f);
-            Debug.Log("damage enemy with cleave:" + col.gameObject.name);
+                healthManager.damageHealth(col.gameObject, hammerDamage / 2f);
             }
         }
+        equipmentManager.hScript.enemiesHit.Clear();
         yield return null;
     }
 

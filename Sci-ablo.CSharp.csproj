@@ -284,7 +284,6 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\CutsceneManager.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -292,6 +291,11 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Inventory\IntentoryEditor.cs" />
+    <Compile Include="Assets\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Inventory\InventoryManager.cs" />
+    <Compile Include="Assets\Inventory\Item.cs" />
+    <Compile Include="Assets\Inventory\Playerhealth.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -343,6 +347,7 @@
     <Compile Include="Assets\Scripts\CameraOrbitScript.cs" />
     <Compile Include="Assets\Scripts\CameraPivotScript.cs" />
     <Compile Include="Assets\Scripts\crawlerAI.cs" />
+    <Compile Include="Assets\Scripts\CutsceneManager.cs" />
     <Compile Include="Assets\Scripts\Demo Scripts\AlienAnimationsScript.cs" />
     <Compile Include="Assets\Scripts\Demo Scripts\AlienMaterialSwapper.cs" />
     <Compile Include="Assets\Scripts\Demo Scripts\PlayerMaterialSwapper.cs" />

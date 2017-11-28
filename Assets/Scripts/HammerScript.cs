@@ -41,9 +41,9 @@ public class HammerScript : MonoBehaviour {
         enemiesHit.Add(col);
     }
 
-    void OnTriggerExit(Collider col)
+    /*void OnTriggerExit(Collider col)
     {
         enemiesHit.Remove(col);
-    }
+    }*/
 
 }

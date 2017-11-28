@@ -290,7 +290,6 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\CutsceneManager.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -354,6 +353,7 @@
     <Compile Include="Assets\Scripts\CameraOrbitScript.cs" />
     <Compile Include="Assets\Scripts\CameraPivotScript.cs" />
     <Compile Include="Assets\Scripts\crawlerAI.cs" />
+    <Compile Include="Assets\Scripts\CutsceneManager.cs" />
     <Compile Include="Assets\Scripts\Demo Scripts\AlienAnimationsScript.cs" />
     <Compile Include="Assets\Scripts\Demo Scripts\AlienMaterialSwapper.cs" />
     <Compile Include="Assets\Scripts\Demo Scripts\PlayerMaterialSwapper.cs" />

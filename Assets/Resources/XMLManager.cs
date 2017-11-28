@@ -38,6 +38,7 @@ public class WeaponEntry
 {
     public string name;
     public weaponType type;
+    public string baseName;
 
     public int physDamage;
     public int fireDamage;

@@ -25,22 +25,22 @@ public class Affix : MonoBehaviour
 
     string[] helmetBase = new string[]
     {
-        "", "", ""
+        "Bucket", "Dome", "Helmet"
     };
 
     string[] chestBase = new string[]
     {
-        "", "", ""
+        "Shirt", "Kevlar Suit", "Power Armor"
     };
 
     string[] gloveBase = new string[]
     {
-        "", "", ""
+        "Mitts", "Armguards", "Gauntlets"
     };
 
     string[] bootBase = new string[]
     {
-        "", "", ""
+        "Sneakers", "Combat Boots", "Sabatons"
     };
 
     string[] WeaponPrefix = new string[]
@@ -98,13 +98,14 @@ public class Affix : MonoBehaviour
         1, 2, 2, 3, 3, 4
     };
 
-    public void ConstructItem(string name, string type, int prefix1, int prefix2, int prefix3, int suffix1, int suffix2, int suffix3)
+    public void ConstructItem(string name, string baseName, string type, int prefix1, int prefix2, int prefix3, int suffix1, int suffix2, int suffix3)
     {
         if (type == "Hammer" || type == "Gun")
         {
             WeaponEntry entry = new WeaponEntry();
             entry.name = name;
             entry.type = (weaponType)System.Enum.Parse(typeof(weaponType), type);
+            entry.baseName = baseName;
             entry.physDamage = prefix1;
             entry.fireDamage = prefix2;
             entry.coldDamage = prefix3;
@@ -132,19 +133,49 @@ public class Affix : MonoBehaviour
 
     }
 
+
+    //I hate the way I did this, it could be so, so much more simple with a few methods but I have no time to clean it up
     public void ConstructItem()
     {
         string name = "";
+        string baseName = "";
         int temp = (int)Random.Range(0,2);
+
         if (temp == 1)
         {
             weaponType item = (weaponType)((int)Random.Range(0,2));
-            name = WeaponPrefix[Random.Range(0, WeaponPrefix.Length)] + "|" + item + "|" + WeaponSuffix[Random.Range(0, WeaponSuffix.Length)];
+
+            if((int)item == 1)
+            {
+                baseName = hammerBase[(int)Random.Range(0, 3)];
+            }
+            else
+            {
+                baseName = gunBase[(int)Random.Range(0, 3)];
+            }
+            name = WeaponPrefix[Random.Range(0, WeaponPrefix.Length)] + "|" + baseName + "|" + WeaponSuffix[Random.Range(0, WeaponSuffix.Length)];
         }
         else
         {
             armorType item = (armorType)((int)Random.Range(0,5));
-            name = ArmorPrefix[Random.Range(0, ArmorPrefix.Length)] + "|" + item + "|" + ArmorSuffix[Random.Range(0, ArmorSuffix.Length)];
+
+            if ((int)item == 1)
+            {
+                baseName = helmetBase[(int)Random.Range(0, 3)];
+            }
+            if ((int)item == 2)
+            {
+                baseName = chestBase[(int)Random.Range(0, 3)];
+            }
+            if ((int)item == 3)
+            {
+                baseName = gloveBase[(int)Random.Range(0, 3)];
+            }
+            else
+            {
+                baseName = bootBase[(int)Random.Range(0, 3)];
+            }
+            name = ArmorPrefix[Random.Range(0, ArmorPrefix.Length)] + "|" + baseName + "|" + ArmorSuffix[Random.Range(0, ArmorSuffix.Length)];
         }
 
         string[] affixes = name.Split('|');
@@ -221,7 +252,7 @@ public class Affix : MonoBehaviour
                 }
             }
 
-            ConstructItem(name, type, physDamage, fireDamage, coldDamage, speed, critChance, lifeLeech);
+            ConstructItem(name, type, baseName, physDamage, fireDamage, coldDamage, speed, critChance, lifeLeech);
         }
 
 
@@ -278,7 +309,7 @@ public class Affix : MonoBehaviour
                 }
             }
 
-            ConstructItem(name, type, armor, health, allRes, lifeRegen, moveSpeed, cooldown);
+            ConstructItem(name, type, baseName, armor, health, allRes, lifeRegen, moveSpeed, cooldown);
         }
     }
 }

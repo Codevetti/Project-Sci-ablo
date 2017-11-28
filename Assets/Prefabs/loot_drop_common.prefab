@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95696885273589806}
   - component: {fileID: 198587572277762844}
   - component: {fileID: 199740758899062254}
+  - component: {fileID: 65603966074895954}
   m_Layer: 0
   m_Name: loot_drop_common
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190562980641242}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -115,6 +116,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190562980641242}
   m_Mesh: {fileID: 4300000, guid: ee3c141e1a10ac44296d3d5808fe24d3, type: 3}
+--- !u!65 &65603966074895954
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190562980641242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.196366, y: 0.20647, z: 0.20647}
+  m_Center: {x: 0, y: 0, z: 0.100939}
 --- !u!95 &95696885273589806
 Animator:
   serializedVersion: 3

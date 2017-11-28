@@ -1344,7 +1344,11 @@ Transform:
   m_GameObject: {fileID: 1675933014717498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 3, y: 3, z: 3}
+=======
+  m_LocalScale: {x: 2, y: 2, z: 2}
+>>>>>>> e195a10962de2364e07737c6b4047227d8f48f9d
   m_Children:
   - {fileID: 4411593411630938}
   - {fileID: 4058356006063710}
@@ -1638,6 +1642,10 @@ MonoBehaviour:
   isSpitter: 0
   mobHealth: 300
   rarity: 2
+<<<<<<< HEAD
+=======
+  lootChance: 0
+>>>>>>> e195a10962de2364e07737c6b4047227d8f48f9d
   playerLocation: {fileID: 0}
   mobCenter: {fileID: 0}
   distanceToCenter: 0

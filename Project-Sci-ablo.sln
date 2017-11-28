@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Sci-ablo", "Project-Sci-ablo.csproj", "{F7A4C69C-D6EE-40FB-D6EF-951628C8914C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Sci-ablo.Editor", "Project-Sci-ablo.Editor.csproj", "{B2F821AF-A427-36E6-6247-3C7A46D60BBD}"

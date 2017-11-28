@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 136264236751059034}
   - component: {fileID: 208990414481176430}
   - component: {fileID: 54943701340118634}
+  - component: {fileID: 114227208501984014}
   m_Layer: 9
   m_Name: alien - rare
   m_TagString: Mob
@@ -1546,6 +1547,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114227208501984014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675933014717498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: 394e93ce356b57344903a08ff72fcab2, type: 3}
+  markerSize: 6.5
+  isActive: 1
 --- !u!114 &114363150195773404
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,15 +14,17 @@ public class crawlerAI : MonoBehaviour {
     private bool aiOn;
     public bool isSpitter;
     public float mobHealth;
+    public Rarity rarity;
+    public float lootChance;
 
     private bool sighted;
     private bool playerNearby;
     private float distanceToPlayer;
     public Transform playerLocation;
-    private float visionRange = 60.0f;
+    private float visionRange = 15.0f;
     private float rotateSpeed = 1.0f;
 
-    public Transform center;
+    public GameObject mobCenter;
     public float distanceToCenter;
     public bool inGroup;
     public bool attacking = false;
@@ -31,13 +33,13 @@ public class crawlerAI : MonoBehaviour {
 
     //for when the enemy is damaged
     public ParticleSystem bloodEffect;
-    public AudioSource  [] crawlerAudio;
-
-
-    healthManager healthManager;
+    public AudioSource[] crawlerAudio;
+    public healthManager healthManager;
 
     void Start ()
     {
+        gameObject.GetComponent<NavMeshAgent>().enabled = false;
+
         aiOn = true;
 
         anim = GetComponent<Animator>();
@@ -56,6 +58,9 @@ public class crawlerAI : MonoBehaviour {
 
         healthManager.mobs.Add(this.gameObject);
 
+        lootChance = ((float)rarity + 1) * 10f;
+        Debug.Log(lootChance);
+
         StartCoroutine("FiniteStateMachine");
     }
 
@@ -64,14 +69,20 @@ public class crawlerAI : MonoBehaviour {
         Debug.DrawRay(transform.position, transform.up * 5, Color.red);
 
         distanceToPlayer = Vector3.Distance(playerLocation.position, transform.position);
-        distanceToCenter = Vector3.Distance(center.position, transform.position);
-        if (distanceToCenter >= 15)
+        distanceToCenter = Vector3.Distance(mobCenter.transform.position, transform.position);
+        if (distanceToCenter >= 15 && aiState != State.standby)
         {
             inGroup = false;
             aiState = State.regroup;
         }
     }
 
+    public enum Rarity
+    {
+        common,
+        magic,
+        rare
+    }
 
     public enum State
     {
@@ -112,10 +123,11 @@ public class crawlerAI : MonoBehaviour {
 
     private void Standby()
     {
-        //Debug.Log("idle");
+        //Debug.Log(distanceToPlayer);
         anim.SetTrigger("Idle");
-        if(distanceToPlayer <= visionRange)
+        if(distanceToPlayer <= visionRange && Time.time >= 2)
         {
+            gameObject.GetComponent<NavMeshAgent>().enabled = true;
             aiState = State.moveto;
         }
     }
@@ -164,7 +176,7 @@ public class crawlerAI : MonoBehaviour {
         }
         else
         {
-            mob.destination = center.position;
+            mob.destination = mobCenter.transform.position;
         }
     }
 

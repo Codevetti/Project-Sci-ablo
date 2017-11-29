@@ -21,8 +21,9 @@ public class crawlerAI : MonoBehaviour {
     private bool playerNearby;
     private float distanceToPlayer;
     public Transform playerLocation;
-    private float visionRange = 15.0f;
+    private float visionRange = 18.0f;
     private float rotateSpeed = 1.0f;
+    private bool waiting = false;
 
     public GameObject mobCenter;
     public float distanceToCenter;
@@ -60,6 +61,8 @@ public class crawlerAI : MonoBehaviour {
 
         lootChance = ((float)rarity + 1) * 10f;
         Debug.Log(lootChance);
+
+        
 
         StartCoroutine("FiniteStateMachine");
     }
@@ -125,11 +128,21 @@ public class crawlerAI : MonoBehaviour {
     {
         //Debug.Log(distanceToPlayer);
         anim.SetTrigger("Idle");
-        if(distanceToPlayer <= visionRange && Time.time >= 2)
+
+        if(waiting == false)
+            StartCoroutine("InactiveDelay"); //for some reason, the distance to player is 0 right when the mobs are spawned, dunno what's up with that so here's my lazy fix
+
+        if (distanceToPlayer <= visionRange && waiting == true)
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = true;
             aiState = State.moveto;
         }
+    }
+
+    IEnumerator InactiveDelay()
+    {
+        yield return new WaitForSeconds(1.0f);
+        waiting = true;
     }
 
     private void Attack()

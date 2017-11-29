@@ -93,6 +93,10 @@ public class PlayerEquipmentManager : MonoBehaviour {
             gun.rotation = gunSocket.rotation;
             gun.parent = gunSocket;
         }
+        if (!gScript.gunBarrel.GetComponent<LineRenderer>().enabled)
+        {
+            gScript.gunBarrel.GetComponent<LineRenderer>().enabled = true;
+        }
         anim.SetBool("EquipGun", true);
         hasWeapon = true;
         isHammer = false;
@@ -104,6 +108,10 @@ public class PlayerEquipmentManager : MonoBehaviour {
         if (rend)
         {
             rend.enabled = false;
+        }
+        if (gScript.gunBarrel.GetComponent<LineRenderer>().enabled && isGun)
+        {
+            gScript.gunBarrel.GetComponent<LineRenderer>().enabled = false;
         }
         hasWeapon = false;
         

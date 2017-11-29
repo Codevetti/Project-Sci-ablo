@@ -63,7 +63,6 @@ public class healthManager : MonoBehaviour
             {
                 playerHealth -= damage;
             }
-
             else
             {
                 //reload the level or something

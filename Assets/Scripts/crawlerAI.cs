@@ -200,4 +200,10 @@ public class crawlerAI : MonoBehaviour {
             aiState = State.regroup;
         }
     }
+
+    //anim event on stationary attack
+    //public void crawlerAttack()
+    //{
+    //    healthManager.damageHealth(player, 5f);
+    //}
 }

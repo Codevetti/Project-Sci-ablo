@@ -71,5 +71,6 @@ public class CutsceneManager : MonoBehaviour {
     public void LoadMain()
     {
         SceneManager.LoadSceneAsync(1);
+        //SceneManager.LoadScene(2, LoadSceneMode.Additive);
     }
 }
